@@ -12,7 +12,7 @@ ul {
 }
 
 #container {
-	max-width: 1024px;
+	max-width: 919px;
 	margin: 0 auto;
 }
 
@@ -21,6 +21,7 @@ ul {
 	 display: flex;
 	 align-items: center;
 	 justify-content: space-between;
+	 position: relative;
 }
 
 /*navigation*/
@@ -45,7 +46,7 @@ ul {
 	 border: none;
 	 background: none;
 	 position: absolute;
-	 left: 0;
+	 right: 0;
 	 top: 70px;
 	 outline: none;
 }
@@ -81,7 +82,7 @@ ul {
 }
 
 .carousel {
-	 width: 1024px;
+	 width: 919px;
 	 margin: 0 auto;
 }
 
@@ -95,6 +96,46 @@ ul {
 }
 
 @media screen and (max-width: 1024px) {
- .nav-list {
- 	flex-direction: column;
+ #container, .carousel {
+ 	max-width: 919px;
 }}
+
+
+.nav {
+	display: none;
+}
+
+
+.header.menu-open .nav {
+	display: block;
+}
+
+.menu-open + .carousel {
+	padding-top: 121px;
+}
+
+.header.menu-open {
+	background: #000;
+	min-height: 316px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+.header.menu-open .burger-icon-item,
+.header.menu-open .burger-icon-item:before,
+.header.menu-open .burger-icon-item:after {
+	background: #fff;
+}
+
+.logo-svg {
+	fill: #fff;
+}
+
+.burger-icon {
+	display: block;
+}
+
+.
